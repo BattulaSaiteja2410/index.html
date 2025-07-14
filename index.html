@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Java Full Stack Developer</title>
+<link rel="stylesheet" href="website.css">
+</head>
+<body>
+
+  <!-- PAGE 1 - PROFILE ONLY -->
+  <div class="page active" id="page1">
+    <header>
+      <h1>Java Full Stack Developer Fresher</h1>
+    </header>
+    <div class="container">
+      <div class="left-side">
+        <img src="B9321540-6EC7-4401-8CFD-C39CBFEFCB1A-removebg-preview.png" alt="Profile Photo" class="profile-photo" />
+      </div>
+      <div class="middle">
+        <div>
+          <h1 id="name">BATTULA SAI TEJA</h1>
+          <h2>Email: battulasaiteja2410@gmail.com<br>Phone: 9100701880</h2>
+         
+        </div>
+      </div>
+      <div class="left">
+        <div>
+          <h1 id="button"> <button onclick="showPage(2)">View More</button></h1>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PAGE 2 - FULL DETAILS -->
+  <div class="page blur" id="page2">
+    <header>
+      <h1>More About Me</h1>
+    </header>
+    <div class="details-content">
+      <h3>Education</h3>
+      <h4 style="text-align: center;"> Schooling</h4>
+      <p>NOBLE E.m HIGH SCHOOL (SSC)<br>CGPA: 6.30<br>Year of Passing: 2016</p><br>
+      <h4 style="text-align: center;"> Intermediate </h4>
+      <p>MPC from Sri Chaitanya jr inter  College (Bord of intermediate)<br>CGPA: 6.30<br>Year of Passing: 2018</p><br>
+      <h4 style="text-align: center;"> Graduation</h4>
+      <p>B.Sc (MSCS) from Nalanda Degree College (Krishna University)<br>CGPA: 7.20<br>Year of Passing: 2022</p>
+
+      <h3>Skills</h3>
+      <div class="flip-card-container">
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="pngwing.com (2).png" alt="Back end"><br>
+              <p style="color: black;">Back end Skills</p>
+            </div>
+            <div class="flip-card-back">
+              <h3>Back End Skills</h3>
+              <ul>
+                <li>Java</li>
+                <li>OOP's Concepts</li>
+                <li>Core Java</li>
+                <li>Eclipse IDE</li>
+                <li>IntelliJ</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="pngwing.com (1).png" alt="Database">
+              <p style="color: black;"> Data base related Skills</p>
+            </div>
+            <div class="flip-card-back">
+              <h3  style="color: rgb(8, 155, 241) ;">Database Skills</h3>
+              <ul>
+                <li>SQL</li>
+                <li>MySQL Workbench</li>
+                <li>RDBMS</li>
+                <li>DBMS</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="pngwing.com.png" alt="Front end">
+              <p style="color: black;">Frant end skills</p>
+            </div>
+            <div class="flip-card-back">
+              <h3>Front End</h3>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Bootstrap</li>
+                <li>Visual Studio</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="pngwing.com (3).png" alt="Others">
+              <p style="color: black;">Frame works and Other technical skills</p>
+            </div>
+            <div class="flip-card-back">
+              <h3 >Relevant Tech Skills</h3>
+              <ul>
+                <li>Apache Tomcat Server</li>
+                <li>Spring Boot, Spring, JDBC</li>
+                <li>GitHub</li>
+                <li>JEE & J2EE</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h3>Experienc</h3>
+      <h3>Projects</h3>
+      <ul>
+        <li>Train Allocation System using Java</li>
+        <li>Temperature Converter in Java</li>
+        <li>Digital Clock using HTML, CSS, and JavaScript</li>
+      </ul>
+    </div>
+   
+
+      <footer>
+        <button onclick="window.open('Battula Sai Teja Resume.pdf', '_blank')">Resume</button>
+        <button onclick="window.open('https://github.com/BattulaSaiteja2410', '_blank')">GitHub</button>
+        <button onclick="window.open('https://www.linkedin.com/in/battula-sai-teja-547538200', '_blank')">LinkedIn</button>
+        <br>
+        <button onclick="showPage(1)">Back to Profile</button>
+       </footer>
+        </div>
+
+       <script>
+    function showPage(pageNum) {
+      document.getElementById('page1').classList.remove('active');
+      document.getElementById('page2').classList.remove('active');
+
+      if (pageNum === 1) {
+        document.getElementById('page1').classList.add('active');
+      } else {
+        document.getElementById('page2').classList.add('active');
+      }
+    }
+  </script>
+</body>
+</html> 

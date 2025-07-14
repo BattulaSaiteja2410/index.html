@@ -1,0 +1,211 @@
+   
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #007bff;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    h3 {
+      text-align: center;
+      color: #007bff;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 15px;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    
+    #page1 {
+      display: none;
+      height: 115vh;
+      background-image: url('leone-venter-VieM9BdZKFo-unsplash.jpg');
+      background-size: cover;
+      background-position: right;
+      color: black;
+    }
+
+    #page1.active {
+      display: block;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: calc(100vh - 80px);
+      padding: 50px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+
+    .middle {
+      text-align: left;
+      flex: 1;
+    }
+
+    .left-side {
+      text-align: left;
+      flex: 1;
+    }
+
+    .profile-photo {
+      width: 450px;
+      height: 550px;
+      object-fit: cover;
+      object-position: left;
+     
+    }
+
+    #name {
+      font-size: 2em;
+      color: blue;
+      animation: slide-in 3s ease-out forwards;
+    }
+
+    @keyframes slide-in {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* === PAGE 2 Styles === */
+    #page2 {
+      display: none;
+      height: 200vh;
+      background-image: url('leone-venter-VieM9BdZKFo-unsplash.jpg');
+      background-size: cover;
+      background-position: right;
+      position: relative;
+    }
+
+    #page2.active {
+      display: block;
+    }
+
+    #page2.blur::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(6px);
+      background-color: rgba(255, 255, 255, 0.3);
+      z-index: -1;
+    }
+
+    .details-content {
+      max-width: 1000px;
+      margin: auto;
+      padding: 20px;
+      text-align: left;
+    }
+
+    .flip-card-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 40px;
+    }
+
+    .flip-card {
+      background-color: transparent;
+      width: 280px;
+      height: 250px;
+      perspective: 1000px;
+    }
+
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: left;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 10px;
+    }
+
+    .flip-card-front {
+      background-color: transparent;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .flip-card-front img {
+      width: 70%;
+      height: 80%;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .flip-card-back {
+      background-color: transparent;
+      color: rgb(15, 15, 15);
+      transform: rotateY(180deg);
+      padding: 10px;
+    }
+
+    footer {
+      background-color: rgb(165, 166, 167);
+      text-align: center;
+      padding: 10px;
+    }
+
+    footer button {
+      margin: 5px;
+    }
+
+    @media (min-width: 768px) {
+      .right-side {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+      }
+    }
